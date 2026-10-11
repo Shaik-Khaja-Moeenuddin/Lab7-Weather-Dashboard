@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Information Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Weather Dashboard</h1>
+        <p>Search for a city to see its current weather.</p>
+
+        <form id="cityForm">
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name, e.g. Vijayawada"
+                required
+            >
+
+            <button type="submit" id="searchButton">
+                Get Weather
+            </button>
+        </form>
+
+        <p id="message" role="status" aria-live="polite">
+            Enter a city name to begin.
+        </p>
+
+        <section class="weather-card" id="weatherCard" hidden>
+            <h2 id="cityName"></h2>
+
+            <img id="weatherIcon" src="" alt="Weather icon">
+
+            <h3 id="temperature"></h3>
+            <p id="description"></p>
+
+            <div class="details">
+                <div class="detail">
+                    <h4>Feels Like</h4>
+                    <p id="feelsLike"></p>
+                </div>
+
+                <div class="detail">
+                    <h4>Humidity</h4>
+                    <p id="humidity"></p>
+                </div>
+
+                <div class="detail">
+                    <h4>Wind Speed</h4>
+                    <p id="windSpeed"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
